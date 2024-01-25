@@ -9,27 +9,36 @@ function LastOrders() {
     // Add more rows as needed
   ];
   return (
-    <table className='w-full mt-5' style={{ borderCollapse: 'collapse'}}>
+    <table className='w-full mt-5 text-sm' style={{ borderCollapse: 'collapse'}}>
     <thead>
       <tr>
         {tableHeaders.map((header, index) => (
-          <th key={index} className='text-gray-400 border-b text-left pb-2'>
+          <th key={index} className='text-[#9CA4AB] border-b text-left pb-2'>
             {header}
           </th>
         ))}
       </tr>
     </thead>
     <tbody>
-      {tableData.map((row, rowIndex) => (
-        <tr key={rowIndex}>
-          {row.map((cell, cellIndex) => (
-            <td key={cellIndex} style={{ borderBottom: '1px solid #ddd', padding: '8px' }}>
-              {cell}
-            </td>
-          ))}
-        </tr>
-      ))}
-    </tbody>
+        {tableData.map((row, rowIndex) => (
+          <tr key={rowIndex}>
+            {row.map((cell, cellIndex) => (
+              <td key={cellIndex} style={{ borderBottom: '1px solid #ddd', padding: '8px' }}>
+                {cellIndex === 0 ? (
+                  <div className='flex items-center'>
+                    <img src={`/path/to/images/${cell.toLowerCase()}.jpg`} alt={cell} className='w-6 h-6 mr-2 rounded-full' />
+                    {cell}
+                  </div>
+                ) : cellIndex === 2 ? (
+                  <strong>{cell}</strong>
+                ) : (
+                  cell
+                )}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
   </table>
   )
 }

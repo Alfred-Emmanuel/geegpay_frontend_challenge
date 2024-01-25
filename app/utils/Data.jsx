@@ -11,7 +11,7 @@ export const SalesOrders = [
     },
     {
         id: 3,
-        totalSales: 2_000,
+        totalSales: 4_000,
         month: "Mar",
     },
     {
@@ -46,7 +46,7 @@ export const SalesOrders = [
     },
     {
         id: 10,
-        totalSales: 4_000,
+        totalSales: 6_000,
         month: "Oct",
     },
     {

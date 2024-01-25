@@ -14,15 +14,27 @@ function SalesTrends({chartData}) {
     scales: {
       x: {
         grid: {
-          // display: false,
-          borderDash: [5, 5], // Hide grid lines for x-axis
+          display: false,
         },
+        // border: {
+        //   // display: false
+        //   dash: [12, 6]
+        // }
       },
       y: {
         max: 50000, 
-        grid: {
-          display: false, // Hide grid lines for y-axis
+        ticks: {
+          stepSize: 10000
+          
         },
+        grid: {
+
+        },
+        border: {
+          display: false,
+          dash: [5, 5]
+
+        }
       },
     },
   }; 

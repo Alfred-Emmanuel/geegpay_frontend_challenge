@@ -18,9 +18,7 @@ export default function Home() {
       borderRadius: "50",
       hoverBackgroundColor: ["#63D7BA"],
       borderWidth: "30",
-      grouped: true
-      // borderSkipped: true,
-      // barThickness: "50"
+      barThickness: "40"
     }]
   })
   return (
@@ -36,14 +34,15 @@ export default function Home() {
               </div>
             </div>
             <div className="border mt-5 rounded-lg px-5 py-4 shadow ">
-              <div className="flex justify-between items-center">
-                <h1>Last Orders</h1>
-                <h1>See All</h1>
+              <div className="flex justify-between items-center text-sm">
+                <h1 className="font-medium">Last Orders</h1>
+                <h1 className="font-medium text-[#63D7BA] cursor-pointer" title="view all">See All</h1>
               </div>
               <LastOrders />
             </div>
           </div>
           <div className="border px-5">
+            
           </div>
         </div>
       </section>
