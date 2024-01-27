@@ -2,8 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles.css (or any global stylesheet) */
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg-color: white; /* Default background color for light mode */
+  --text-color: black; /* Default text color for light mode */
 }
+
+/* Other styles for your application */
+
+.light-mode {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  /* Additional styles for light mode */
+}
+
+.dark-mode {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  /* Additional styles for dark mode */
+}
+
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #63D7BA;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #63D7BA;
+    border-radius: 50px;
+
+  }
+
+  /* &::-webkit-scrollbar-track {
+    background-color: #4a5568;
+  } */
+}
+
